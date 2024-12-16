@@ -9,16 +9,13 @@ const connectDB = new DataSource({
     port: 5432,
     username: "postgres",
     password: "postgres",
-    database: "PassSaver",
+    database: "Comedor",
     logging: false,
+    ssl: false,
     synchronize: true,
     entities: ["dist/Entities/*.js"],
     migrations: [__dirname + "../../src/migrations/*{.ts, .js}"],
-    extra: {
-        ssl: {
-            rejectUnauthorized: true
-        }
-    }
+    
 });
 connectDB.initialize()
 .then(() => {

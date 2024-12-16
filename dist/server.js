@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
-const user_router_1 = require("./router/user.router");
+const user_router_1 = require("./user/user.router");
 const config_1 = require("./config/config");
 const ormconfig_1 = __importDefault(require("./config/ormconfig"));
 class nombre_del_servidor extends config_1.ConfigServer {
