@@ -9,6 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const user_router_1 = require("./user/user.router");
 const config_1 = require("./config/config");
 const ormconfig_1 = __importDefault(require("./config/ormconfig"));
+const area_router_1 = require("./Area/area.router");
 class nombre_del_servidor extends config_1.ConfigServer {
     //constructor de la clase
     constructor() {
@@ -25,7 +26,10 @@ class nombre_del_servidor extends config_1.ConfigServer {
         this.listen();
     }
     routers() {
-        return [new user_router_1.UserRouter().router];
+        return [
+            new user_router_1.UserRouter().router,
+            new area_router_1.AreaRouter().router
+        ];
     }
     //funcion de escucha del puerto
     listen() {

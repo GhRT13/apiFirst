@@ -4,6 +4,7 @@ import cors from 'cors';
 import { UserRouter } from "./user/user.router";
 import { ConfigServer } from './config/config';
 import connectDB from './config/ormconfig';
+import { AreaRouter } from './Area/area.router';
 
 class nombre_del_servidor extends ConfigServer {
 	// variables de la clase
@@ -23,7 +24,10 @@ class nombre_del_servidor extends ConfigServer {
     }
 
     routers(): Array<express.Router> {
-        return [ new UserRouter().router ];
+        return [ 
+            new UserRouter().router,
+            new AreaRouter().router 
+        ];
     }
 
     //funcion de escucha del puerto
