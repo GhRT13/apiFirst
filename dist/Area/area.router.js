@@ -9,6 +9,7 @@ class AreaRouter extends router_1.BaseRouter {
     }
     routes() {
         this.router.get('/area', (req, res) => this.controller.getAreas(req, res));
+        this.router.get('/allareas', (req, res) => this.controller.getAllAreas(req, res));
     }
 }
 exports.AreaRouter = AreaRouter;

@@ -10,6 +10,11 @@ const user_router_1 = require("./user/user.router");
 const config_1 = require("./config/config");
 const ormconfig_1 = __importDefault(require("./config/ormconfig"));
 const area_router_1 = require("./Area/area.router");
+const estudiante_router_1 = require("./Estudiante/estudiante.router");
+const menu_router_1 = require("./Menu/menu.router");
+const plato_router_1 = require("./Plato/plato.router");
+const reserva_router_1 = require("./Reserva/reserva.router");
+const trabajador_router_1 = require("./Trabajador/trabajador.router");
 class nombre_del_servidor extends config_1.ConfigServer {
     //constructor de la clase
     constructor() {
@@ -28,7 +33,12 @@ class nombre_del_servidor extends config_1.ConfigServer {
     routers() {
         return [
             new user_router_1.UserRouter().router,
-            new area_router_1.AreaRouter().router
+            new area_router_1.AreaRouter().router,
+            new estudiante_router_1.EstudianteRouter().router,
+            new menu_router_1.MenuRouter().router,
+            new plato_router_1.PlatoRouter().router,
+            new reserva_router_1.ReservaRouter().router,
+            new trabajador_router_1.TrabajadorRouter().router
         ];
     }
     //funcion de escucha del puerto

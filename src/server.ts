@@ -5,6 +5,11 @@ import { UserRouter } from "./user/user.router";
 import { ConfigServer } from './config/config';
 import connectDB from './config/ormconfig';
 import { AreaRouter } from './Area/area.router';
+import { EstudianteRouter } from './Estudiante/estudiante.router';
+import { MenuRouter } from './Menu/menu.router';
+import { PlatoRouter } from './Plato/plato.router';
+import { ReservaRouter } from './Reserva/reserva.router';
+import { TrabajadorRouter } from './Trabajador/trabajador.router';
 
 class nombre_del_servidor extends ConfigServer {
 	// variables de la clase
@@ -26,7 +31,12 @@ class nombre_del_servidor extends ConfigServer {
     routers(): Array<express.Router> {
         return [ 
             new UserRouter().router,
-            new AreaRouter().router 
+            new AreaRouter().router,
+            new EstudianteRouter().router,
+            new MenuRouter().router,
+            new PlatoRouter().router,
+            new ReservaRouter().router,
+            new TrabajadorRouter().router
         ];
     }
 
