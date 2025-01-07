@@ -1,31 +1,26 @@
 {
-  "name": "apifirst",
+  "name": "webclase",
   "version": "1.0.0",
-  "description": "api prueba 1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/server.js",
-    "start:dev": "tsc && concurrently  \"tsc -w\" \"nodemon dist/server\" "
+    "start:dev": "tsc && concurrently  \"tsc -w\" \"nodemon dist/server\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GhRT13/apiFirst.git"
-  },
-  "author": "Magdiel",
+  "author": "addiel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GhRT13/apiFirst/issues"
-  },
-  "homepage": "https://github.com/GhRT13/apiFirst#readme",
+  "description": "",
   "dependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/typeorm": "^9.0.0",
     "class-validator": "^0.14.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "pg": "^8.13.1",
+    "postgres": "^3.4.5",
     "typeorm": "^0.3.20",
     "typeorm-naming-strategies": "^4.1.0",
     "typescript": "^5.7.2"
@@ -34,7 +29,8 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
+    "@types/node": "^22.10.2",
     "concurrently": "^9.1.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.7"
   }
 }

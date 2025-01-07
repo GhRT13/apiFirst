@@ -42,15 +42,12 @@ class ConfigServer {
             path: nodeNameEnv,
         });
     }
-    //Función que retorna un string o indefinido
     getEnvironment(k) {
         return process.env[k];
     }
-    //Funcion que retorna un número pasando un string
     getNumberEnv(k) {
         return Number(this.getEnvironment(k));
     }
-    //Función que retorna un string o vacio
     get nodeEnv() {
         var _a;
         return ((_a = this.getEnvironment("NODE_ENV")) === null || _a === void 0 ? void 0 : _a.trim()) || " ";
